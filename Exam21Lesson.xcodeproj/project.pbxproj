@@ -12,6 +12,12 @@
 		DD3BC37A2CB6B84200517B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3792CB6B84200517B49 /* ViewController.swift */; };
 		DD3BC37F2CB6B84300517B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3BC37E2CB6B84300517B49 /* Assets.xcassets */; };
 		DD3BC3822CB6B84300517B49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3BC3802CB6B84300517B49 /* LaunchScreen.storyboard */; };
+		DD3BC38C2CB6BC9200517B49 /* NarutoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC38B2CB6BC9200517B49 /* NarutoModel.swift */; };
+		DD3BC38F2CB6BD2F00517B49 /* NarutoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC38E2CB6BD2F00517B49 /* NarutoManager.swift */; };
+		DD3BC3932CB6C13800517B49 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3922CB6C13800517B49 /* CustomButton.swift */; };
+		DD3BC3952CB71D5600517B49 /* NarutoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3942CB71D5600517B49 /* NarutoDataManager.swift */; };
+		DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */; };
+		DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		DD3BC37E2CB6B84300517B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD3BC3812CB6B84300517B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD3BC3832CB6B84300517B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD3BC38B2CB6BC9200517B49 /* NarutoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoModel.swift; sourceTree = "<group>"; };
+		DD3BC38E2CB6BD2F00517B49 /* NarutoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoManager.swift; sourceTree = "<group>"; };
+		DD3BC3922CB6C13800517B49 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DD3BC3942CB71D5600517B49 /* NarutoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoDataManager.swift; sourceTree = "<group>"; };
+		DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+AddSubviews.swift"; sourceTree = "<group>"; };
+		DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +68,58 @@
 			children = (
 				DD3BC3752CB6B84200517B49 /* AppDelegate.swift */,
 				DD3BC3772CB6B84200517B49 /* SceneDelegate.swift */,
-				DD3BC3792CB6B84200517B49 /* ViewController.swift */,
-				DD3BC37E2CB6B84300517B49 /* Assets.xcassets */,
-				DD3BC3802CB6B84300517B49 /* LaunchScreen.storyboard */,
+				DD3BC3892CB6BB7700517B49 /* Controllers */,
+				DD3BC38D2CB6BC9E00517B49 /* Model */,
+				DD3BC3992CB740A200517B49 /* CustomElements */,
+				DD3BC38A2CB6BB8300517B49 /* Resources */,
+				DD3BC3982CB7409100517B49 /* Extensions */,
 				DD3BC3832CB6B84300517B49 /* Info.plist */,
 			);
 			path = Exam21Lesson;
+			sourceTree = "<group>";
+		};
+		DD3BC3892CB6BB7700517B49 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD3BC3792CB6B84200517B49 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DD3BC38A2CB6BB8300517B49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD3BC3802CB6B84300517B49 /* LaunchScreen.storyboard */,
+				DD3BC37E2CB6B84300517B49 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DD3BC38D2CB6BC9E00517B49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD3BC38B2CB6BC9200517B49 /* NarutoModel.swift */,
+				DD3BC38E2CB6BD2F00517B49 /* NarutoManager.swift */,
+				DD3BC3942CB71D5600517B49 /* NarutoDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD3BC3982CB7409100517B49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */,
+				DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD3BC3992CB740A200517B49 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				DD3BC3922CB6C13800517B49 /* CustomButton.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD3BC37A2CB6B84200517B49 /* ViewController.swift in Sources */,
+				DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */,
+				DD3BC38F2CB6BD2F00517B49 /* NarutoManager.swift in Sources */,
+				DD3BC3932CB6C13800517B49 /* CustomButton.swift in Sources */,
+				DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */,
 				DD3BC3762CB6B84200517B49 /* AppDelegate.swift in Sources */,
+				DD3BC38C2CB6BC9200517B49 /* NarutoModel.swift in Sources */,
 				DD3BC3782CB6B84200517B49 /* SceneDelegate.swift in Sources */,
+				DD3BC3952CB71D5600517B49 /* NarutoDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
