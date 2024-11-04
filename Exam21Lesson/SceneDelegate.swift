@@ -20,12 +20,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let dataManager = NarutoDataManager()
+        let charactersArray = dataManager.narutoManager.getNarutosCharacters().sorted(by: >)
+        dataManager.narutoCharacters = charactersArray
+        printCustomDescription()
+        
         let viewController = ViewController()
         viewController.narutoData = dataManager
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
+        
+        func printCustomDescription() {
+            charactersArray.forEach { print($0) }
+        }
     }
-
 }
 

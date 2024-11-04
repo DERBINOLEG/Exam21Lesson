@@ -15,8 +15,8 @@ protocol DataManager {
 }
 
 class NarutoDataManager: DataManager {
-    private var narutoCharacters: [NarutoModel] = []
-    private var narutoManager = NarutoManager()
+    var narutoCharacters: [NarutoModel] = []
+    var narutoManager = NarutoManager()
     private var index = 0
     
     init() {

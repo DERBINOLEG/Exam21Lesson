@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         let character = narutoData?.nextCharacter()
         let image = UIImage(named: character?.imageName ?? "")
         imageCharacter.image = image
-        characterInfoLabel.text = character?.description
+        characterInfoLabel.text = character?.title
     }
 
 
@@ -69,7 +69,7 @@ private extension ViewController {
     }
     
     func setupInfoLabel() {
-        characterInfoLabel.text = narutoData?.getCharacter().description
+        characterInfoLabel.text = narutoData?.getCharacter().title
         characterInfoLabel.numberOfLines = 0
         characterInfoLabel.textAlignment = .center
         characterInfoLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -90,13 +90,13 @@ private extension ViewController {
         lastButton.addAction(UIAction { _ in
             let character = self.narutoData?.lastCharacter()
             self.imageCharacter.image = UIImage(named: character?.imageName ?? "")
-            self.characterInfoLabel.text = character?.description
+            self.characterInfoLabel.text = character?.title
         }, for: .touchUpInside)
         firstButton.addAction(UIAction { _ in
             let character = self.narutoData?.firstCharacter()
             if let character {
                 self.imageCharacter.image = UIImage(named: character.imageName)
-                self.characterInfoLabel.text = character.description
+                self.characterInfoLabel.text = character.title
             }
         }, for: .touchUpInside)
     }
