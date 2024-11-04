@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     private let lastButton = CustomButton(text: "Last", buttonColor: .blue, textColor: .white)
     private let nextButton = CustomButton(text: "Next", buttonColor: .white, textColor: .black)
     private let firstButton = CustomButton(text: "First", buttonColor: .red, textColor: .white)
-    private let narutoData = NarutoDataManager()
+    var narutoData: DataManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,10 @@ class ViewController: UIViewController {
     
     @objc
     private func nextButtonTapped() {
-        let character = narutoData.nextCharacter()
-        let image = UIImage(named: character.imageName)
+        let character = narutoData?.nextCharacter()
+        let image = UIImage(named: character?.imageName ?? "")
         imageCharacter.image = image
-        characterInfoLabel.text = character.description
+        characterInfoLabel.text = character?.description
     }
 
 
@@ -62,14 +62,14 @@ private extension ViewController {
     }
     
     func setupImageCharacter() {
-        let image = UIImage(named: narutoData.getCharacter().imageName)
+        let image = UIImage(named: narutoData?.getCharacter().imageName ?? "")
         imageCharacter.image = image
         imageCharacter.layer.shadowOffset = CGSize(width: 5, height: 5)
         imageCharacter.layer.shadowOpacity = 0.7
     }
     
     func setupInfoLabel() {
-        characterInfoLabel.text = narutoData.getCharacter().description
+        characterInfoLabel.text = narutoData?.getCharacter().description
         characterInfoLabel.numberOfLines = 0
         characterInfoLabel.textAlignment = .center
         characterInfoLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -88,12 +88,12 @@ private extension ViewController {
     func addActions() {
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         lastButton.addAction(UIAction { _ in
-            let character = self.narutoData.lastCharacter()
-            self.imageCharacter.image = UIImage(named: character.imageName)
-            self.characterInfoLabel.text = character.description
+            let character = self.narutoData?.lastCharacter()
+            self.imageCharacter.image = UIImage(named: character?.imageName ?? "")
+            self.characterInfoLabel.text = character?.description
         }, for: .touchUpInside)
         firstButton.addAction(UIAction { _ in
-            let character = self.narutoData.firstCharacter()
+            let character = self.narutoData?.firstCharacter()
             if let character {
                 self.imageCharacter.image = UIImage(named: character.imageName)
                 self.characterInfoLabel.text = character.description
