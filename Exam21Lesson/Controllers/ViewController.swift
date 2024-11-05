@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     private let lastButton = CustomButton(text: "Last", buttonColor: .blue, textColor: .white)
     private let nextButton = CustomButton(text: "Next", buttonColor: .white, textColor: .black)
     private let firstButton = CustomButton(text: "First", buttonColor: .red, textColor: .white)
-    var narutoData: DataManager?
+    var narutoData: IDataManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()

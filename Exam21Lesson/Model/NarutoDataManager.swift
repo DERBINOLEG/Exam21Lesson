@@ -7,20 +7,20 @@
 
 import Foundation
 
-protocol DataManager {
+protocol IDataManager {
     func getCharacter() -> NarutoModel
     func nextCharacter() -> NarutoModel
     func lastCharacter() -> NarutoModel
     func firstCharacter() -> NarutoModel?
 }
 
-class NarutoDataManager: DataManager {
+class NarutoDataManager: IDataManager {
     var narutoCharacters: [NarutoModel] = []
     var narutoManager = NarutoManager()
     private var index = 0
     
-    init() {
-        self.narutoCharacters = narutoManager.getNarutosCharacters()
+    init(narutoCharacters: [NarutoModel]) {
+        self.narutoCharacters = narutoCharacters
     }
     
     func getCharacter() -> NarutoModel {

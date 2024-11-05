@@ -19,8 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let dataManager = NarutoDataManager()
-        let charactersArray = dataManager.narutoManager.getNarutosCharacters().sorted(by: >)
+        let narutoManager = NarutoManager()
+        let charactersArray = narutoManager.getNarutosCharacters().sorted(by: >)
+        let dataManager = NarutoDataManager(narutoCharacters: charactersArray)
         dataManager.narutoCharacters = charactersArray
         printCustomDescription()
         
