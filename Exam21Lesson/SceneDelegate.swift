@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let narutoManager = NarutoManager()
         let charactersArray = narutoManager.getNarutosCharacters().sorted(by: >)
         let dataManager = NarutoDataManager(narutoCharacters: charactersArray)
-        dataManager.narutoCharacters = charactersArray
         printCustomDescription()
         
         let viewController = ViewController()

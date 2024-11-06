@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol ICustomButtonDelegate {
+    func buttonPressed(_ button: UIButton)
+}
+
 class CustomButton: UIButton {
+    
+    var delegate: ICustomButtonDelegate?
     
     init(text: String, buttonColor: UIColor, textColor: UIColor) {
         super.init(frame: .zero)
         setupButton(text: text, buttonColor: buttonColor, textColor: textColor)
+        addAction()
     }
     
     @available(*, unavailable)
@@ -42,5 +49,14 @@ extension CustomButton {
         super.layoutSubviews()
         let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 15)
         layer.shadowPath = shadowPath.cgPath
+    }
+}
+
+//MARK: - SetupAction
+extension CustomButton {
+    private func addAction() {
+        self.addAction(UIAction { _ in
+            self.delegate?.buttonPressed(self)
+        }, for: .touchUpInside)
     }
 }
