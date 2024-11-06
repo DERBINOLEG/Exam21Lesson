@@ -16,15 +16,35 @@ class ViewController: UIViewController {
     private let lastButton = CustomButton(text: "Last", buttonColor: .blue, textColor: .white)
     private let nextButton = CustomButton(text: "Next", buttonColor: .white, textColor: .black)
     private let firstButton = CustomButton(text: "First", buttonColor: .red, textColor: .white)
+    
     var narutoData: IDataManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastButton.delegate = self
+        nextButton.delegate = self
+        firstButton.delegate = self
         setupUI()
     }
     
     @objc
     private func nextButtonTapped() {
+        let character = narutoData?.nextCharacter()
+        let image = UIImage(named: character?.imageName ?? "")
+        imageCharacter.image = image
+        characterInfoLabel.text = character?.title
+    }
+    
+    @objc
+    private func lastButtonTapped() {
+        let character = narutoData?.nextCharacter()
+        let image = UIImage(named: character?.imageName ?? "")
+        imageCharacter.image = image
+        characterInfoLabel.text = character?.title
+    }
+    
+    @objc
+    private func firstButtonTapped() {
         let character = narutoData?.nextCharacter()
         let image = UIImage(named: character?.imageName ?? "")
         imageCharacter.image = image
@@ -44,7 +64,6 @@ private extension ViewController {
         setupImageCharacter()
         setupInfoLabel()
         setupHorizontalStackView()
-        addActions()
         setupLayout()
     }
     
@@ -84,22 +103,7 @@ private extension ViewController {
         
         horizontalStackView.addSequenceSubviews(lastButton, nextButton)
     }
-    
-    func addActions() {
-        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
-        lastButton.addAction(UIAction { _ in
-            let character = self.narutoData?.lastCharacter()
-            self.imageCharacter.image = UIImage(named: character?.imageName ?? "")
-            self.characterInfoLabel.text = character?.title
-        }, for: .touchUpInside)
-        firstButton.addAction(UIAction { _ in
-            let character = self.narutoData?.firstCharacter()
-            if let character {
-                self.imageCharacter.image = UIImage(named: character.imageName)
-                self.characterInfoLabel.text = character.title
-            }
-        }, for: .touchUpInside)
-    }
+
 }
 
 //MARK: Setup Layout
@@ -121,6 +125,28 @@ private extension ViewController {
             firstButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50)
         ])
         
+    }
+}
+
+//MARK: - ICustomButtonDelegate
+extension ViewController: ICustomButtonDelegate {
+    func buttonPressed(_ button: UIButton) {
+        switch button {
+        case nextButton:
+            nextButtonTapped()
+        case lastButton:
+            let character = self.narutoData?.lastCharacter()
+            self.imageCharacter.image = UIImage(named: character?.imageName ?? "")
+            self.characterInfoLabel.text = character?.title
+        case firstButton:
+            let character = self.narutoData?.firstCharacter()
+            if let character {
+                self.imageCharacter.image = UIImage(named: character.imageName)
+                self.characterInfoLabel.text = character.title
+            }
+            default:
+                break
+        }
     }
 }
 
