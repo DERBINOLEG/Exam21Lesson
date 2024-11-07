@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         nextButton.delegate = self
         firstButton.delegate = self
         setupUI()
+        
+        print(view.countViews(lastButton, nextButton, firstButton))
+        view.printViewName(lastButton, nextButton, firstButton)
     }
     
     @objc
@@ -60,11 +63,18 @@ private extension ViewController {
         view.addGradient()
         view.addSubview(verticalStackView)
         view.addSubview(firstButton)
+        setupButtons()
         setupVerticalStackView()
         setupImageCharacter()
         setupInfoLabel()
         setupHorizontalStackView()
         setupLayout()
+    }
+    
+    func setupButtons() {
+        lastButton.nameInstance = "lastButton"
+        nextButton.nameInstance = "nextButton"
+        firstButton.nameInstance = "firstButton"
     }
     
     func setupVerticalStackView() {
