@@ -8,6 +8,7 @@
 import UIKit
 
 class CustomButton: UIButton {
+    var nameInstance: String?
     
     init(text: String, buttonColor: UIColor, textColor: UIColor) {
         super.init(frame: .zero)
