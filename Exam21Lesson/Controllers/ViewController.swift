@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         view.printViewName(lastButton, nextButton, firstButton)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        characterInfoLabel.text = narutoData?.getCharacter().imageName
+    }
+    
     @objc
     private func nextButtonTapped() {
         let character = narutoData?.nextCharacter()
