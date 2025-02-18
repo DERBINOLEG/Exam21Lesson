@@ -18,6 +18,7 @@
 		DD3BC3952CB71D5600517B49 /* NarutoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3942CB71D5600517B49 /* NarutoDataManager.swift */; };
 		DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */; };
 		DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */; };
+		DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DD3BC3942CB71D5600517B49 /* NarutoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoDataManager.swift; sourceTree = "<group>"; };
 		DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+AddSubviews.swift"; sourceTree = "<group>"; };
 		DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */,
 				DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */,
+				DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				DD3BC37A2CB6B84200517B49 /* ViewController.swift in Sources */,
 				DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */,
+				DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */,
 				DD3BC38F2CB6BD2F00517B49 /* NarutoManager.swift in Sources */,
 				DD3BC3932CB6C13800517B49 /* CustomButton.swift in Sources */,
 				DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */,
