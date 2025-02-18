@@ -34,30 +34,11 @@ class ViewController: UIViewController {
         characterInfoLabel.text = narutoData?.getCharacter().imageName
     }
     
-    @objc
-    private func nextButtonTapped() {
-        let character = narutoData?.nextCharacter()
-        let image = UIImage(named: character?.imageName ?? "")
+    private func buttonTapped(model: NarutoModel?) {
+        let image = UIImage(named: model?.imageName ?? "")
         imageCharacter.image = image
-        characterInfoLabel.text = character?.title
+        characterInfoLabel.text = model?.title
     }
-    
-    @objc
-    private func lastButtonTapped() {
-        let character = narutoData?.nextCharacter()
-        let image = UIImage(named: character?.imageName ?? "")
-        imageCharacter.image = image
-        characterInfoLabel.text = character?.title
-    }
-    
-    @objc
-    private func firstButtonTapped() {
-        let character = narutoData?.nextCharacter()
-        let image = UIImage(named: character?.imageName ?? "")
-        imageCharacter.image = image
-        characterInfoLabel.text = character?.title
-    }
-
 
 }
 
@@ -147,17 +128,14 @@ extension ViewController: ICustomButtonDelegate {
     func buttonPressed(_ button: UIButton) {
         switch button {
         case nextButton:
-            nextButtonTapped()
+            let character = self.narutoData?.nextCharacter()
+            buttonTapped(model: character)
         case lastButton:
             let character = self.narutoData?.lastCharacter()
-            self.imageCharacter.image = UIImage(named: character?.imageName ?? "")
-            self.characterInfoLabel.text = character?.title
+            buttonTapped(model: character)
         case firstButton:
             let character = self.narutoData?.firstCharacter()
-            if let character {
-                self.imageCharacter.image = UIImage(named: character.imageName)
-                self.characterInfoLabel.text = character.title
-            }
+            buttonTapped(model: character)
             default:
                 break
         }
