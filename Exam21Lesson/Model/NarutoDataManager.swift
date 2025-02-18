@@ -12,6 +12,7 @@ protocol IDataManager {
     func nextCharacter() -> NarutoModel
     func lastCharacter() -> NarutoModel
     func firstCharacter() -> NarutoModel?
+    func findModel(forFind: String) -> NarutoModel?
 }
 
 class NarutoDataManager: IDataManager {
@@ -47,5 +48,14 @@ class NarutoDataManager: IDataManager {
             index = 0
         }
         return character
+    }
+    
+    func findModel(forFind: String) -> NarutoModel? {
+        for model in narutoCharacters {
+            if model.imageName == forFind {
+                return model
+            }
+        }
+        return nil
     }
 }
