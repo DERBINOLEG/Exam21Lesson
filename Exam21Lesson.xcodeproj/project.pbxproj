@@ -20,6 +20,7 @@
 		DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */; };
 		DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */; };
 		DD6355CC2D64EDA4009106FC /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */; };
+		DD946E5F2D6629BE00479F9A /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
+		DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				DD3BC3792CB6B84200517B49 /* ViewController.swift */,
 				DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */,
+				DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */,
 				DD6355CC2D64EDA4009106FC /* FindImageViewController.swift in Sources */,
 				DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */,
+				DD946E5F2D6629BE00479F9A /* PanImageViewController.swift in Sources */,
 				DD3BC38F2CB6BD2F00517B49 /* NarutoManager.swift in Sources */,
 				DD3BC3932CB6C13800517B49 /* CustomButton.swift in Sources */,
 				DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */,
