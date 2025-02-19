@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let charactersArray = narutoManager.getNarutosCharacters().sorted(by: >)
         let dataManager = NarutoDataManager(narutoCharacters: charactersArray)
         
-        let viewController = FindImageViewController()
+        let viewController = PanImageViewController()
         viewController.narutoData = dataManager
         
         window?.rootViewController = viewController
