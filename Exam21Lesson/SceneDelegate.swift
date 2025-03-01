@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let charactersArray = narutoManager.getNarutosCharacters().sorted(by: >)
         let dataManager = NarutoDataManager(narutoCharacters: charactersArray)
         
-        let viewController = PanImageViewController()
-        viewController.narutoData = dataManager
+        let viewController = LicenseAgreementViewController(textManager: TextManager())
+//        viewController.narutoData = dataManager
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

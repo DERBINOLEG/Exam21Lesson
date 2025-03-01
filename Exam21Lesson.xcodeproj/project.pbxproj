@@ -21,6 +21,8 @@
 		DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */; };
 		DD6355CC2D64EDA4009106FC /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */; };
 		DD946E5F2D6629BE00479F9A /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */; };
+		DDE5052A2D7339E6002B15B0 /* LicenseAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */; };
+		DDE5052C2D734C61002B15B0 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE5052B2D734C61002B15B0 /* TextManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
 		DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
+		DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreementViewController.swift; sourceTree = "<group>"; };
+		DDE5052B2D734C61002B15B0 /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				DD3BC3792CB6B84200517B49 /* ViewController.swift */,
 				DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */,
 				DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */,
+				DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				DD3BC38B2CB6BC9200517B49 /* NarutoModel.swift */,
 				DD3BC38E2CB6BD2F00517B49 /* NarutoManager.swift */,
 				DD3BC3942CB71D5600517B49 /* NarutoDataManager.swift */,
+				DDE5052B2D734C61002B15B0 /* TextManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,11 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE5052A2D7339E6002B15B0 /* LicenseAgreementViewController.swift in Sources */,
 				DD3BC37A2CB6B84200517B49 /* ViewController.swift in Sources */,
 				DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */,
 				DD6355CC2D64EDA4009106FC /* FindImageViewController.swift in Sources */,
 				DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */,
 				DD946E5F2D6629BE00479F9A /* PanImageViewController.swift in Sources */,
+				DDE5052C2D734C61002B15B0 /* TextManager.swift in Sources */,
 				DD3BC38F2CB6BD2F00517B49 /* NarutoManager.swift in Sources */,
 				DD3BC3932CB6C13800517B49 /* CustomButton.swift in Sources */,
 				DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */,
