@@ -21,6 +21,7 @@
 		DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */; };
 		DD6355CC2D64EDA4009106FC /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */; };
 		DD946E5F2D6629BE00479F9A /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */; };
+		DDDA51C82D775EAA00791233 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA51C72D775EAA00791233 /* ImageListViewController.swift */; };
 		DDE5052A2D7339E6002B15B0 /* LicenseAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */; };
 		DDE5052C2D734C61002B15B0 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE5052B2D734C61002B15B0 /* TextManager.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
 		DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
+		DDDA51C72D775EAA00791233 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreementViewController.swift; sourceTree = "<group>"; };
 		DDE5052B2D734C61002B15B0 /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */,
 				DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */,
 				DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */,
+				DDDA51C72D775EAA00791233 /* ImageListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDDA51C82D775EAA00791233 /* ImageListViewController.swift in Sources */,
 				DDE5052A2D7339E6002B15B0 /* LicenseAgreementViewController.swift in Sources */,
 				DD3BC37A2CB6B84200517B49 /* ViewController.swift in Sources */,
 				DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */,

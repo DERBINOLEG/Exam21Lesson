@@ -8,15 +8,20 @@
 import Foundation
 
 protocol IDataManager {
+    var narutoCharacters: [NarutoModel] { get }
     func getCharacter() -> NarutoModel
     func nextCharacter() -> NarutoModel
     func lastCharacter() -> NarutoModel
     func firstCharacter() -> NarutoModel?
     func findModel(forFind: String) -> NarutoModel?
+    func removeCharacter(index: Int)
+    func changeMark(index: Int)
 }
 
 class NarutoDataManager: IDataManager {
-    private var narutoCharacters: [NarutoModel] = []
+    
+    
+    var narutoCharacters: [NarutoModel] = []
     private var index = 0
     
     init(narutoCharacters: [NarutoModel]) {
@@ -57,5 +62,13 @@ class NarutoDataManager: IDataManager {
             }
         }
         return nil
+    }
+    
+    func removeCharacter(index: Int) {
+        narutoCharacters.remove(at: index)
+    }
+    
+    func changeMark(index: Int) {
+        narutoCharacters[index].isMark.toggle()
     }
 }

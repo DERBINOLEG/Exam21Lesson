@@ -10,6 +10,7 @@ import Foundation
 struct NarutoModel {
     let imageName: String
     let title: String
+    var isMark: Bool = false
 }
 
 //MARK: - Comparable
