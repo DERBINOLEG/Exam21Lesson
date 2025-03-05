@@ -16,6 +16,7 @@ protocol IDataManager {
     func findModel(forFind: String) -> NarutoModel?
     func removeCharacter(index: Int)
     func changeMark(index: Int)
+    func returnMarkCharacters() -> [NarutoModel]
 }
 
 class NarutoDataManager: IDataManager {
@@ -70,5 +71,14 @@ class NarutoDataManager: IDataManager {
     
     func changeMark(index: Int) {
         narutoCharacters[index].isMark.toggle()
+    }
+    func returnMarkCharacters() -> [NarutoModel] {
+        var markCharacters = [NarutoModel]()
+        narutoCharacters.forEach {
+            if $0.isMark {
+                markCharacters.append($0)
+            }
+        }
+        return markCharacters
     }
 }

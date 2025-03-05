@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		DD3BC3972CB7229A00517B49 /* UIStackView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */; };
 		DD3BC39B2CB7410900517B49 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */; };
 		DD510AAC2CDD3B56007A287F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */; };
+		DD6060912D78E227007FDEE2 /* MarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6060902D78E227007FDEE2 /* MarTableViewController.swift */; };
 		DD6355CC2D64EDA4009106FC /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */; };
 		DD946E5F2D6629BE00479F9A /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */; };
 		DDDA51C82D775EAA00791233 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA51C72D775EAA00791233 /* ImageListViewController.swift */; };
@@ -41,12 +42,17 @@
 		DD3BC3962CB7229900517B49 /* UIStackView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+AddSubviews.swift"; sourceTree = "<group>"; };
 		DD3BC39A2CB7410900517B49 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		DD510AAB2CDD3B56007A287F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DD6060902D78E227007FDEE2 /* MarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarTableViewController.swift; sourceTree = "<group>"; };
 		DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
 		DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
 		DDDA51C72D775EAA00791233 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreementViewController.swift; sourceTree = "<group>"; };
 		DDE5052B2D734C61002B15B0 /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DD6060922D78E6E4007FDEE2 /* CustomCell */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CustomCell; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DD3BC36F2CB6B84200517B49 /* Frameworks */ = {
@@ -93,11 +99,13 @@
 		DD3BC3892CB6BB7700517B49 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD6060922D78E6E4007FDEE2 /* CustomCell */,
 				DD3BC3792CB6B84200517B49 /* ViewController.swift */,
 				DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */,
 				DD946E5E2D6629BE00479F9A /* PanImageViewController.swift */,
 				DDE505292D7339E6002B15B0 /* LicenseAgreementViewController.swift */,
 				DDDA51C72D775EAA00791233 /* ImageListViewController.swift */,
+				DD6060902D78E227007FDEE2 /* MarTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +162,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DD6060922D78E6E4007FDEE2 /* CustomCell */,
 			);
 			name = Exam21Lesson;
 			productName = Exam21Lesson;
@@ -224,6 +235,7 @@
 				DD3BC3762CB6B84200517B49 /* AppDelegate.swift in Sources */,
 				DD3BC38C2CB6BC9200517B49 /* NarutoModel.swift in Sources */,
 				DD3BC3782CB6B84200517B49 /* SceneDelegate.swift in Sources */,
+				DD6060912D78E227007FDEE2 /* MarTableViewController.swift in Sources */,
 				DD3BC3952CB71D5600517B49 /* NarutoDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
