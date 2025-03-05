@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
       
-        let viewController = ImageListViewController()
+        let viewController = MarTableViewController()
         viewController.dataManager = buildNarutoManager()
 
         window?.rootViewController = viewController
