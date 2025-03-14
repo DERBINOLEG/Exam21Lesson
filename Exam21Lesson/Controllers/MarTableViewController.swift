@@ -16,6 +16,16 @@ class MarTableViewController: UITableViewController {
         tableView.register(CharacterCell.self, forCellReuseIdentifier: cellIdentifire)
     }
     
+    private func setupAction(cell: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let character = dataManager.returnMarkCharacters()[indexPath.row]
+            if let index = dataManager.narutoCharacters.firstIndex(of: character) {
+                dataManager.changeMark(index: index)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
+    
     
     override func tableView(
         _ tableView: UITableView,
@@ -36,6 +46,7 @@ class MarTableViewController: UITableViewController {
         }
         let markCharacter = dataManager.returnMarkCharacters()[indexPath.row]
         cell.configure(character: markCharacter)
+        cell.action = setupAction(cell:)
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

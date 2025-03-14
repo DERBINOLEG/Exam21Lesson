@@ -12,6 +12,8 @@ class CharacterCell: UITableViewCell {
     private let characterName = UILabel()
     private let descriptionLabel = UILabel()
     private let markButtun = UIButton()
+    var action: ((UITableViewCell) -> ())?
+    var toggleMark = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,7 +28,9 @@ class CharacterCell: UITableViewCell {
         characterImage.image = UIImage(named: character.imageName)
         characterName.text = character.imageName
         descriptionLabel.text = character.description
-        markButtun.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        toggleMark = character.isMark
+        let mark = character.isMark ? "checkmark.square.fill" : "checkmark.square"
+        markButtun.setImage(UIImage(systemName: mark), for: .normal)
     }
 }
 //MARK: SetupUI
@@ -59,6 +63,12 @@ private extension CharacterCell {
     }
     func setupButton() {
         markButtun.tintColor = .systemBlue
+        markButtun.addAction(UIAction {_ in
+            self.toggleMark.toggle()
+            let mark = self.toggleMark ? "checkmark.square.fill" : "checkmark.square"
+            self.markButtun.setImage(UIImage(systemName: mark), for: .normal)
+            self.action?(self)
+        }, for: .touchUpInside)
     }
 }
 //MARK: - SetupLayout
