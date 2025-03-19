@@ -11,22 +11,15 @@ class MarTableViewController: UITableViewController {
     var dataManager: IDataManager!
     private let cellIdentifire = "cellIdentifire"
     
+//    MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemPink
         tableView.register(CharacterCell.self, forCellReuseIdentifier: cellIdentifire)
+        tableView.separatorStyle = .none
     }
     
-    private func setupAction(cell: UITableViewCell) {
-        if let indexPath = tableView.indexPath(for: cell) {
-            let character = dataManager.returnMarkCharacters()[indexPath.row]
-            if let index = dataManager.narutoCharacters.firstIndex(of: character) {
-                dataManager.changeMark(index: index)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
-        }
-    }
-    
-    
+//    MARK: - UITableViewDataSource
     override func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -45,11 +38,27 @@ class MarTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let markCharacter = dataManager.returnMarkCharacters()[indexPath.row]
+        cell.action = { myCell in
+            self.setupAction(cell: myCell)
+        }
         cell.configure(character: markCharacter)
-        cell.action = setupAction(cell:)
+        cell.selectionStyle = .none
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+//    MARK: - Private Methods
+    
+    private func setupAction(cell: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let character = dataManager.returnMarkCharacters()[indexPath.row]
+            if let index = dataManager.narutoCharacters.firstIndex(of: character) {
+                dataManager.changeMark(index: index)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
+    
 }
