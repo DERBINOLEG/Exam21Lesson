@@ -52,6 +52,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DD6060922D78E6E4007FDEE2 /* CustomCell */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CustomCell; sourceTree = "<group>"; };
+		DDD19B6A2D8ABB5300AA9A6E /* CustomView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CustomView; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		DD3BC3892CB6BB7700517B49 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDD19B6A2D8ABB5300AA9A6E /* CustomView */,
 				DD6060922D78E6E4007FDEE2 /* CustomCell */,
 				DD3BC3792CB6B84200517B49 /* ViewController.swift */,
 				DD6355CB2D64EDA4009106FC /* FindImageViewController.swift */,
@@ -165,6 +167,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DD6060922D78E6E4007FDEE2 /* CustomCell */,
+				DDD19B6A2D8ABB5300AA9A6E /* CustomView */,
 			);
 			name = Exam21Lesson;
 			productName = Exam21Lesson;
